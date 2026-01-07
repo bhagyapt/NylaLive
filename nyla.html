@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYLA Live</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family: 'Press Start 2P', cursive; background: #fff; color: #000; overflow-x:hidden;}
+a {text-decoration:none; color: inherit;}
+
+/* --- Hero Section --- */
+.hero {
+height: 100vh;
+background: linear-gradient(135deg, #fff700, #ffffff);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position: relative;
+overflow: hidden;
+text-align: center;
+}
+.hero h1 {
+font-size: 4rem;
+color: #000;
+text-shadow: 0 0 10px #fffa00, 0 0 20px #fffa00;
+animation: flicker 2s infinite;
+}
+.hero p {font-size: 1.2rem; margin: 20px 0; color: #111;}
+.hero button {
+padding: 15px 35px;
+font-size: 1rem;
+border: none;
+background-color: #000;
+color: #fff700;
+cursor: pointer;
+border-radius: 10px;
+transition: 0.3s;
+}
+.hero button:hover {background-color: #fff700; color: #000; transform: scale(1.1);}
+
+.icon {
+position: absolute;
+font-size: 2rem;
+animation: float 6s infinite linear;
+opacity: 0.7;
+}
+@keyframes float {0% {transform: translateY(100vh) rotate(0deg);} 100% {transform: translateY(-100px) rotate(360deg);}}
+@keyframes flicker {0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {opacity: 1;} 20%, 22%, 24%, 55% {opacity: 0.4;}}
+
+/* --- About Section --- */
+.about {background-color: #111; color: #fff; padding: 80px 20px; display: flex; flex-direction: column; align-items: center; gap: 40px;}
+.about h2 {color: #fff700; margin-bottom:20px;}
+.stats {display: flex; gap: 50px; justify-content: center; flex-wrap: wrap;}
+.stat {text-align:center;}
+.stat h3 {font-size:2rem; color:#fff700;}
+.stat p {margin-top:10px; font-size:0.9rem; color:#fff;}
+
+/* --- Clips Section --- */
+.clips {padding: 80px 20px; text-align: center; background: #fff;}
+.clips h2 {color:#000; margin-bottom:40px;}
+.clip-container {display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;}
+.clip {width: 300px; height: 170px; border-radius: 15px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; border: 3px solid #fff700;}
+.clip:hover {transform: scale(1.05); box-shadow: 0 0 20px #fff700;}
+
+/* --- Gaming Section --- */
+.gaming {
+background-color: #111;
+color: #fff;
+padding: 80px 20px;
+text-align: center;
+}
+.gaming h2 {color: #fff700; margin-bottom:40px;}
+.game-cards {display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;}
+.game-card {
+background-color: #000;
+border: 2px solid #fff700;
+width: 220px;
+height: 150px;
+border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.2rem;
+transition: transform 0.3s, box-shadow 0.3s;
+cursor: pointer;
+}
+.game-card:hover {transform: scale(1.05); box-shadow: 0 0 15px #fff700;}
+
+/* --- Schedule Section --- */
+.schedule {background: #fff700; padding: 80px 20px; text-align: center;}
+.schedule h2 {color:#000; margin-bottom:30px;}
+.schedule ul {list-style:none; font-size:1rem;}
+.schedule li {margin:15px 0; color:#111;}
+
+/* --- Contact / Subscribe Section --- */
+.contact {background: #111; color: #fff; text-align: center; padding: 80px 20px;}
+.contact h2 {margin-bottom:20px;}
+.contact button {
+padding: 12px 35px;
+font-size:0.9rem;
+border:none;
+border-radius:15px;
+background:#fff700;
+color:#000;
+cursor:pointer;
+transition:0.3s;
+}
+.contact button:hover {transform:scale(1.1); background:#fff;}
+
+/* --- Footer --- */
+footer {background:#000; color:#fff; text-align:center; padding:20px; font-size:0.8rem;}
+
+@media(max-width:768px){
+.hero h1 {font-size:3rem;}
+.hero p {font-size:1rem;}
+.clip {width:90%; height:200px;}
+.stats {flex-direction:column; gap:30px;}
+.game-card {width:90%; height:150px;}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+<h1>NYLA Live</h1>
+<p>Streaming the Chaos & Fun</p>
+<button>Join the Madness</button>
+
+<div class="icon" style="left:10%;">🎮</div>
+<div class="icon" style="left:30%;">🕹️</div>
+<div class="icon" style="left:50%;">👾</div>
+<div class="icon" style="left:70%;">🎲</div>
+<div class="icon" style="left:90%;">💛</div>
+</section>
+
+<!-- About Section -->
+<section class="about">
+<h2>About NYLA</h2>
+<div class="stats">
+<div class="stat">
+<h3>25K</h3>
+<p>Followers</p>
+</div>
+<div class="stat">
+<h3>100+</h3>
+<p>Streams</p>
+</div>
+<div class="stat">
+<h3>Daily</h3>
+<p>6:45 PM – 7:00 PM</p>
+</div>
+</div>
+</section>
+
+<!-- Clips Section -->
+<section class="clips">
+<h2>Highlights</h2>
+<div class="clip-container">
+<iframe class="clip" src="https://www.youtube.com/embed?listType=user_uploads&list=nylalive" frameborder="0" allowfullscreen></iframe>
+<iframe class="clip" src="https://www.youtube.com/embed?listType=user_uploads&list=nylalive" frameborder="0" allowfullscreen></iframe>
+<iframe class="clip" src="https://www.youtube.com/embed?listType=user_uploads&list=nylalive" frameborder="0" allowfullscreen></iframe>
+<iframe class="clip" src="https://www.youtube.com/embed?listType=user_uploads&list=nylalive" frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- Gaming Section -->
+<section class="gaming">
+<h2>Gaming Vibe Zone</h2>
+<div class="game-cards">
+<div class="game-card" onclick="openGame('snake')">🎮 Controller</div>
+<div class="game-card" onclick="openGame('tetris')">🕹️ Arcade</div>
+<div class="game-card" onclick="openGame('flappy')">💻 PC Gaming</div>
+<div class="game-card" onclick="openGame('soundboard')">🎧 Headset</div>
+</div>
+</section>
+
+<!-- Game Modal -->
+<div id="gameModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+<div style="position:relative; width:90%; max-width:800px; height:80%; background:#000; border:5px solid #fff700; border-radius:15px;">
+<span onclick="closeGame()" style="position:absolute; top:10px; right:20px; cursor:pointer; font-size:2rem; color:#fff700;">&times;</span>
+<iframe id="gameFrame" src="" style="width:100%; height:100%; border:none; border-radius:10px;"></iframe>
+</div>
+</div>
+
+<script>
+function openGame(game){
+let url = '';
+switch(game){
+case 'snake':
+url = 'https://playsnake.org/embed';
+break;
+case 'tetris':
+url = 'https://tetris.com/play-tetris';
+break;
+case 'flappy':
+url = 'https://flappybird.io/';
+break;
+case 'soundboard':
+url = 'https://www.soundsnap.com/soundboard';
+break;
+}
+document.getElementById('gameFrame').src = url;
+document.getElementById('gameModal').style.display = 'flex';
+}
+function closeGame(){
+document.getElementById('gameModal').style.display = 'none';
+document.getElementById('gameFrame').src = '';
+}
+</script>
+
+<!-- Schedule Section -->
+<section class="schedule">
+<h2>Streaming Schedule</h2>
+<ul>
+<li>Daily: 6:45 PM – 7:00 PM</li>
+</ul>
+</section>
+
+<!-- Contact / Subscribe Section -->
+<section class="contact">
+<h2>SEND A SURPRISE TO NYLA</h2>
+<button>💛 Subscribe 💛</button>
+</section>
+
+<!-- Footer -->
+<footer>
+&copy; 2026 NYLA Live. All Rights Reserved.
+</footer>
+
+</body>
+</html>
